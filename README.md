@@ -20,6 +20,8 @@
   </h2>
 </div>
 
+> **This is a fork of [excalidraw/excalidraw](https://github.com/excalidraw/excalidraw) that adds a native desktop app powered by [Tauri](https://tauri.app/).** The desktop app wraps the full Excalidraw web application and packages it as a native binary for macOS, Windows, and Linux.
+
 <br />
 <p align="center">
   <a href="https://github.com/excalidraw/excalidraw/blob/master/LICENSE">
@@ -80,7 +82,36 @@ The app hosted at [excalidraw.com](https://excalidraw.com) is a minimal showcase
 
 We'll be adding these features as drop-in plugins for the npm package in the future.
 
-## Quick start
+## Desktop App
+
+This fork adds a native desktop application using [Tauri v2](https://tauri.app/). The desktop source lives in [`excalidraw-app/src-tauri/`](excalidraw-app/src-tauri/).
+
+### Prerequisites
+
+- [Rust](https://www.rust-lang.org/tools/install) (stable)
+- [Tauri CLI prerequisites](https://tauri.app/start/prerequisites/) for your OS
+- Node.js & Yarn
+
+### Run in development
+
+```bash
+yarn install
+cd excalidraw-app
+yarn tauri dev
+```
+
+### Build a release binary
+
+```bash
+cd excalidraw-app
+yarn tauri build
+```
+
+The compiled installer/binary is placed in `excalidraw-app/src-tauri/target/release/bundle/`.
+
+---
+
+## Quick start (npm package)
 
 **Note:** following instructions are for installing the Excalidraw [npm package](https://www.npmjs.com/package/@excalidraw/excalidraw) when integrating Excalidraw into your own app. To run the repository locally for development, please refer to our [Development Guide](https://docs.excalidraw.com/docs/introduction/development).
 
